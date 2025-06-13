@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-    <!-- Custom styling -->
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
@@ -178,6 +187,118 @@
             50% { transform: translateY(-20px) rotate(180deg); }
         }
         
+        /* Team Section Styles */
+        .team-section {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+            margin-top: 0;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .team-header {
+            margin-bottom: 60px;
+        }
+
+        .team-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 16px;
+            letter-spacing: -0.025em;
+        }
+
+        .team-subtitle {
+            font-size: 1.25rem;
+            color: #718096;
+            font-weight: 400;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 220px;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid #28a745;
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .member-title {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 16px;
+            background: #f7fafc;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: white;
+            background: #28a745;
+            transform: translateY(-2px);
+        }
+        
         /* Access Page Styles */
         .access-page {
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
@@ -252,16 +373,36 @@
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
-        .slide-out-left {
-            transform: translateX(-100%);
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-grid {
+                gap: 30px;
+            }
+            
+            .team-title {
+                font-size: 2.5rem;
+            }
+            
+            .member-photo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .team-member {
+                max-width: 200px;
+                padding: 25px 15px;
+            }
         }
-        
-        .slide-in-right {
-            transform: translateX(100%);
-        }
-        
-        .slide-in-center {
-            transform: translateX(0);
+
+        @media (max-width: 480px) {
+            .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .team-section {
+                padding: 60px 15px;
+            }
         }
     </style>
 </head>
@@ -289,10 +430,10 @@
                             <!-- Logo/Header Section -->
                             <div class="logo-section rounded-top-4">
                                 <div class="logo-icon pulse-animation">
-                                   <img src="LOGO RASMI SAGS RGB.png" width="170" height="100" style="display: block; margin: auto;">
+                                   <img src="LOGO RASMI SAGS RGB.png" width="170" height="100" style="display: block; margin: auto;" alt="Multi-SysPA Logo">
                                 </div>
                                 <h1 class="text-white fw-bold mb-2">Multi-SysPA</h1>
-                                <h4 class="text-white-50 fw-light">Solar-Powered IoT-Enabled Multiple System Precision Agriculture</h4>
+                                <h3 class="text-white fw-bold">Solar-Powered IoT-Enabled Multiple System Precision Agriculture</h3>
                             </div>
                             
                             <!-- Main Content -->
@@ -380,6 +521,83 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h1 class="team-title">Meet the Team</h1>
+                    <p class="team-subtitle">The geniuses behind this innovation</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="nadzirah.jpg" alt="Dr. Nadzirah BTE Mohd Mokhtar">
+                        </div>
+                        <h3 class="member-name">Assoc Prof Dr. Nadzirah<br>BTE Mohd Mokhtar</h3>
+                        <p class="member-title">Team Leader</p>
+                        <div class="social-links">
+                            
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="rosha.jpg" alt="Ts. Dr. Roshahliza M Ramli">
+                        </div>
+                        <h3 class="member-name">Assoc Prof Ts. Dr.<br>Roshahliza M Ramli</h3>
+                        <p class="member-title">IoT Expert</p>
+                        <div class="social-links">
+                           
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Fairuz.jpg" alt="Fairuz Rizal Bin Mohammad Rashidi">
+                        </div>
+                        <h3 class="member-name">Fairuz Rizal Bin Mohammad Rashidi</h3>
+                        <p class="member-title">Technology Consultant</p>
+                        <div class="social-links">
+                           
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="razman.jpg" alt="Razman Bin Mohd Maulot">
+                        </div>
+                        <h3 class="member-name">Razman Bin Mohd Maulot</h3>
+                        <p class="member-title">Interdisciplinary<br>Technologist</p>
+                        <div class="social-links">
+                            
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Wan Hakeem.jpg" alt="Wan Muhammad Hakeem Bin Waa Mohd Azman">
+                        </div>
+                        <h3 class="member-name">Wan Muhammad Hakeem Bin Waa Mohd Azman</h3>
+                        <p class="member-title">Electrical Engineer</p>
+                        <div class="social-links">
+						 </a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Farid.jpg" alt="Muhammad Fariduddin Bin Mohammad Illias">
+                        </div>
+                        <h3 class="member-name">Muhammad Fariduddin Bin Mohammad Illias</h3>
+                        <p class="member-title">Sofware Engineer</p>
+                        <div class="social-links">
                         </div>
                     </div>
                 </div>
