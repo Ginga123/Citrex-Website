@@ -404,6 +404,35 @@
                 padding: 60px 15px;
             }
         }
+		{
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster-container {
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .poster-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
     </style>
 </head>
 <body>
@@ -613,6 +642,9 @@
 				
                         </div>
                     </div>
+					<div class="poster-container">
+        <img src="Slide1.png" alt="Random Sample Image" class="poster-image">
+    </div>
                 </div>
             </div>
         </div>
